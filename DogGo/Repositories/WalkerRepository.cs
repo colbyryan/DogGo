@@ -50,7 +50,7 @@ namespace DogGo.Repositories
 
                             walkers.Add(walker);
                         }
-
+                        
                         return walkers;
                     }
                 }
@@ -83,14 +83,14 @@ namespace DogGo.Repositories
                                 ImageUrl = reader.GetString(reader.GetOrdinal("ImageUrl")),
                                 NeighborhoodId = reader.GetInt32(reader.GetOrdinal("NeighborhoodId"))
                             };
-
+                            
                             return walker;
                         }
                         else
-                        {
+                        {                            
                             return null;
                         }
-                    }
+                    }   
                 }
             }
         }
