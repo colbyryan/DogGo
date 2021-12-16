@@ -30,12 +30,19 @@
         </dd>
     </dl>
 </div>
-<div>
-    <h3>Walks</h3>
-    @foreach(Walk walk in Model.Walks)
-    {
-        <p>@walk.Duration</p>
-    }
+<div class="Walks">
+    <div class="walksList">
+        <h3>Walks</h3>
+        @foreach (Walk walk in Model.Walks)
+        {
+            <p>@walk.Date</p>
+            <p>@walk.OwnerName</p>
+            <p>@walk.Duration</p>
+        }
+    </div>
+    <div>
+        <h3>Toatal Walk Time: @Model.TotalWalkTime</h3>
+    </div>
 </div>
 <div>
     <a href="/walkers/edit/@Model.Walker.Id">Edit</a> |
